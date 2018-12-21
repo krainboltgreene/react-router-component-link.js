@@ -26,22 +26,17 @@
     "url": "https://github.com/krainboltgreene/react-router-component-link.js/issues"
   },
   "homepage": "https://github.com/krainboltgreene/react-router-component-link.js#readme",
-  "peerDependencies": {
-    "history": "^4",
-    "prop-types": "^15",
-    "react": "^16",
-    "react-router": "^4",
-    "tiny-invariant": "^1"
+  "dependencies": {
+    "tiny-invariant": "1",
+    "history": "4",
+    "prop-types": "15",
+    "react": "16",
+    "react-router": "4.3.1"
   },
   "devDependencies": {
-    "@babel/cli": "^7.2.0",
-    "@babel/core": "^7.2.2",
-    "@babel/preset-env": "^7.2.0",
-    "@babel/preset-react": "^7.0.0",
-    "history": "^4",
-    "prop-types": "^15",
-    "react": "^16",
-    "react-router": "^4",
-    "tiny-invariant": "^1"
+    "@babel/cli": "7.2.0",
+    "@babel/core": "7.2.2",
+    "@babel/preset-env": "7.2.0",
+    "@babel/preset-react": "7.0.0"
   }
 }
