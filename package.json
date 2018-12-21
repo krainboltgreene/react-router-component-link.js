@@ -1,6 +1,6 @@
 {
   "name": "react-router-component-link",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "An alternative to react-router's <Link> component that won't force presentation on you.",
   "main": "tmp/index.js",
   "scripts": {
