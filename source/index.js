@@ -78,4 +78,4 @@ class ComponentLink extends React.Component {
   }
 }
 
-export default Link;
+export default ComponentLink;
