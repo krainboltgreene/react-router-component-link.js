@@ -1,0 +1,47 @@
+{
+  "name": "react-router-component-link",
+  "version": "1.0.0",
+  "description": "An alternative to react-router's <Link> component that won't force presentation on you.",
+  "main": "tmp/index.js",
+  "scripts": {
+    "build": "babel --out-dir='./tmp/' './source/index.js'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/krainboltgreene/react-router-component-link.js.git"
+  },
+  "keywords": [
+    "react",
+    "router",
+    "react-router",
+    "link"
+  ],
+  "files": [
+    "./source/index.js",
+    "./tmp/index.js"
+  ],
+  "author": "Kurtis Rainbolt-Greene <kurtis@rainbolt-greene.online>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/krainboltgreene/react-router-component-link.js/issues"
+  },
+  "homepage": "https://github.com/krainboltgreene/react-router-component-link.js#readme",
+  "peerDependencies": {
+    "history": "^4",
+    "prop-types": "^15",
+    "react": "^16",
+    "react-router": "^4",
+    "tiny-invariant": "^1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.2.0",
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.2.0",
+    "@babel/preset-react": "^7.0.0",
+    "history": "^4",
+    "prop-types": "^15",
+    "react": "^16",
+    "react-router": "^4",
+    "tiny-invariant": "^1"
+  }
+}
