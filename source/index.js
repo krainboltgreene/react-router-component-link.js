@@ -11,7 +11,7 @@ function isModifiedEvent(event) {
 /**
  * The public API for rendering a history-aware <a>.
  */
-class ComponentLink extends React.Component {
+export default class ComponentLink extends React.Component {
   handleClick(event, history) {
     if (this.props.onClick) this.props.onClick(event);
 
@@ -55,20 +55,4 @@ class ComponentLink extends React.Component {
       </RouterContext.Consumer>
     );
   }
-}
-
-if (__DEV__) {
-  const toType = PropTypes.oneOfType([PropTypes.string, PropTypes.object]);
-  const innerRefType = PropTypes.oneOfType([PropTypes.string, PropTypes.func]);
-
-  ComponentLink.propTypes = {
-    innerRef: innerRefType,
-    onClick: PropTypes.func,
-    replace: PropTypes.bool,
-    target: PropTypes.string,
-    component: PropTypes.node.isRequired,
-    to: toType.isRequired
-  };
-}
-
-export default ComponentLink;
+};
