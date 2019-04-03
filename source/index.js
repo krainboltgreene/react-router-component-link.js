@@ -15,7 +15,7 @@ class ComponentLink extends React.Component {
     target: PropTypes.string,
     replace: PropTypes.bool,
     to: PropTypes.oneOfType([PropTypes.string, PropTypes.object]).isRequired,
-    component: PropTypes.node.isRequired,
+    component: PropTypes.oneOfType([PropTypes.node, PropTypes.func]).isRequired,
     innerRef: PropTypes.oneOfType([PropTypes.string, PropTypes.func])
   };
 
