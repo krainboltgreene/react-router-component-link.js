@@ -2,41 +2,74 @@
   "name": "react-router-component-link",
   "version": "2.0.3",
   "description": "An alternative to react-router's <Link> component that won't force presentation on you.",
-  "main": "tmp/index.js",
-  "scripts": {
-    "build": "babel --out-dir='./tmp/' './source/index.js'"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/krainboltgreene/react-router-component-link.js.git"
-  },
   "keywords": [
     "react",
-    "router",
     "react-router",
-    "link"
+    "link",
+    "component"
   ],
-  "files": [
-    "./source/index.js",
-    "./tmp/index.js"
+  "contributors": [
+    {
+      "name": "Kurtis Rainbolt-Greene",
+      "email": "kurtis@rainbolt-greene.online",
+      "url": "https://kurtis.rainbolt-greene.online"
+    }
   ],
-  "author": "Kurtis Rainbolt-Greene <kurtis@rainbolt-greene.online>",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/krainboltgreene/react-router-component-link.js/issues"
-  },
   "homepage": "https://github.com/krainboltgreene/react-router-component-link.js#readme",
-  "dependencies": {
-    "history": "^4",
-    "invariant": "^2",
-    "prop-types": "^15",
-    "react": "^16"
+  "repository": "github:krainboltgreene/react-router-component-link.js",
+  "bugs": "https://github.com/krainboltgreene/react-router-component-link.js/issues",
+  "module": "module.js",
+  "main": "main.js",
+  "browser": "browser.js",
+  "nyc": {
+    "require": [
+      "@babel/register"
+    ],
+    "sourceMap": false,
+    "instrument": false
   },
+  "scripts": {
+    "prepublishOnly": "npm run build",
+    "test": "NODE_ENV=test tap --100 './test.js'",
+    "build": "npm run build:browser && npm run build:main",
+    "build:main": "babel --env-name main --out-file './main.js' './index.js'",
+    "build:browser": "babel --env-name browser --out-file './browser.js' './index.js'",
+    "lint": "eslint './index.js'",
+    "ci": "npm run test"
+  },
+  "files": [
+    "index.js",
+    "main.js",
+    "main.js.map",
+    "browser.js",
+    "browser.js.map"
+  ],
   "devDependencies": {
-    "@babel/cli": "7.2.0",
-    "@babel/core": "7.2.2",
-    "@babel/plugin-proposal-class-properties": "^7.2.3",
-    "@babel/preset-env": "7.2.0",
-    "@babel/preset-react": "7.0.0"
+    "@babel/cli": "7.4.4",
+    "@babel/core": "7.4.4",
+    "@babel/preset-react": "7.0.0",
+    "@babel/plugin-proposal-class-properties": "7.4.4",
+    "@babel/plugin-proposal-object-rest-spread": "7.3.4",
+    "@babel/preset-env": "7.4.4",
+    "@babel/register": "7.4.0",
+    "babel-eslint": "10.0.1",
+    "babel-plugin-annotate-console-log": "1.0.0",
+    "babel-plugin-istanbul": "5.1.1",
+    "babel-plugin-module-resolver": "3.2.0",
+    "babel-plugin-transform-imports": "1.5.1",
+    "babel-preset-minify": "0.5.0",
+    "eslint": "5.16.0",
+    "eslint-import-resolver-babel-module": "5.0.1",
+    "eslint-plugin-babel": "5.3.0",
+    "eslint-plugin-promise": "4.1.1",
+    "nyc": "13.3.0",
+    "tap": "12.6.1"
+  },
+  "dependencies": {
+    "history": "4.9.0",
+    "invariant": "2.2.4",
+    "prop-types": "15.7.2",
+    "react": "16.8.6"
   }
 }

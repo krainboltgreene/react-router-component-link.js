@@ -6,14 +6,16 @@
 
 # Regenerable files
 /node_modules/
-
-# Temporary files
 /tmp/
 /coverage/
 /.nyc_output/
+browser.js
+browser.js.map
+main.js
+main.js.map
 
 # Log files
-/*.log
+*.log
 
-# Secure files
+# Sensitive files
 /.env

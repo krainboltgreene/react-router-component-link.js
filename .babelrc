@@ -1,4 +1,29 @@
 {
-  "presets": ["@babel/preset-react", "@babel/preset-env"],
-  "plugins": ["@babel/plugin-proposal-class-properties"]
+  "sourceMaps": true,
+  "presets": [
+    "@babel/preset-react",
+    "minify"
+  ],
+  "plugins": [
+    "@babel/plugin-proposal-object-rest-spread",
+    "@babel/plugin-proposal-class-properties"
+  ],
+  "env": {
+    "main": {
+      "presets": [
+        ["@babel/preset-env", {"targets": {"node": 10}, "useBuiltIns": "usage", "corejs": 3}],
+      ]
+    },
+    "browser": {
+      "presets": [
+        ["@babel/preset-env", {"useBuiltIns": "usage", "corejs": 3}],
+      ]
+    },
+    "test": {
+      "plugins": [
+        "istanbul",
+        "annotate-console-log"
+      ]
+    }
+  }
 }
