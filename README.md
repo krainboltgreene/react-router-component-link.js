@@ -1,3 +1,5 @@
+**No longer needed, https://github.com/ReactTraining/react-router/issues/5437#issuecomment-534796727**
+
 # react-router ComponentLink
 
 This is a clone of Link, but it allows you to pass a `component` property which will be used to render the DOM element being clicked (the traditional `Link` component renders an `<a>` element). Nothing else is changed.
